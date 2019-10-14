@@ -2,6 +2,9 @@ package pack.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -18,7 +21,7 @@ public class JikwonController {
 	private JikwonInter jikwonInter;
 	
 	@RequestMapping("jikwonlist")
-	public ModelAndView getList() {
+	public ModelAndView getList(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("list");
 		

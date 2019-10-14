@@ -8,6 +8,9 @@
 </head>
 <body>
 	* 직 원   자 료 * <br>
+<%
+	if(session.getAttribute("name") != null) out.println("<a href='logout'>로그아웃</a>");
+%>
 	<table border="1">
 		<tr><th>사번</th><th>이름</th><th>소속</th><th>직급</th><th>성별</th></tr>
 		<c:forEach var="j" items="${list }">
